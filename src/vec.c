@@ -13,7 +13,7 @@ typedef int TYPE_DST;
 typedef int TYPE_SRC;
 #endif
 
-ae2f_MAC((TYPE, )) ae2fpat_vec_init(
+ae2f_MAC((TYPE, )) ae2fpat_vec_init_imp(
 		fn_ae2fpat_allocarr_t	fn_alloc,
 		TYPE*			rn,
 		size_t			r_nel,
@@ -33,7 +33,7 @@ ae2f_MAC((TYPE, )) ae2fpat_vec_init(
 
 #if	!__ae2f_MACRO_GENERATED
 
-#define _ae2fpat_vec_init( \
+#define _ae2fpat_vec_init_imp( \
 	/** tparam */ \
 		TYPE, \
  \
@@ -44,11 +44,11 @@ ae2f_MAC((TYPE, )) ae2fpat_vec_init(
 		/*       count_t */ r_nmax, \
 		/*      const  count_t */ c_nel_new, \
 		/*     const  size_t    */ c_szel_new \
-)	ae2fpat_vec_init(fn_alloc, rn, r_nel, r_nmax, c_nel_new, c_szel_new)
+)	ae2fpat_vec_init_imp(fn_alloc, rn, r_nel, r_nmax, c_nel_new, c_szel_new)
 
 #endif
 
-ae2f_MAC((L, TYPE, )) ae2fpat_vec_grow(
+ae2f_MAC((L, TYPE, )) ae2fpat_vec_grow_imp(
 		fn_ae2fpat_allocarr_t	fn_alloc,
 		fn_ae2fpat_reallocarr_t	fn_realloc,
 		TYPE*			rcn,
@@ -60,7 +60,7 @@ ae2f_MAC((L, TYPE, )) ae2fpat_vec_grow(
 		)
 {
 	unless(rcn) {
-		_ae2fpat_vec_init(
+		_ae2fpat_vec_init_imp(
 				TYPE
 				, fn_alloc
 				, rcn
@@ -82,7 +82,7 @@ ae2f_MAC((L, TYPE, )) ae2fpat_vec_grow(
 
 #if	!__ae2f_MACRO_GENERATED
 
-#define _ae2fpat_vec_grow( \
+#define _ae2fpat_vec_grow_imp( \
 	/** tparam */ \
 		L,TYPE, \
  \
@@ -94,11 +94,11 @@ ae2f_MAC((L, TYPE, )) ae2fpat_vec_grow(
 		/*       size_t */ rc_nmax, \
 		/*      const  size_t */ c_nel_new, \
 		/*     const  size_t    */ c_szel \
-)	ae2fpat_vec_grow(fn_alloc, fn_realloc, rcn, rc_nel, rc_nmax, c_nel_new, c_szel)
+)	ae2fpat_vec_grow_imp(fn_alloc, fn_realloc, rcn, rc_nel, rc_nmax, c_nel_new, c_szel)
 
 #endif
 
-ae2f_MAC((TYPE_DST, TYPE_SRC, mempcy, memset, )) ae2fpat_vec_recfg(
+ae2f_MAC((TYPE_DST, TYPE_SRC, mempcy, memset, )) ae2fpat_vec_recfg_imp(
 		fn_ae2fpat_allocarr_t	fn_alloc,
 		fn_ae2fpat_reallocarr_t	fn_realloc,
 		TYPE_DST*		rn_dst,
@@ -112,7 +112,7 @@ ae2f_MAC((TYPE_DST, TYPE_SRC, mempcy, memset, )) ae2fpat_vec_recfg(
 		const size_t		c_szel_src
 		)
 {
-	_ae2fpat_vec_grow(
+	_ae2fpat_vec_grow_imp(
 			L$$L
 			, TYPE_DST
 			, fn_alloc
@@ -125,7 +125,7 @@ ae2f_MAC((TYPE_DST, TYPE_SRC, mempcy, memset, )) ae2fpat_vec_recfg(
 			);
 
 	ae2f_expected_if((rd_src) && (rn_dst)) {
-		_ae2fpat_arrcfg(
+		_ae2fpat_arrcfg_imp(
 				L$$L$$L
 				, memcpy
 				, memset

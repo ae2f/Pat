@@ -1,7 +1,7 @@
 /** @file arrcfg.c */
 
-#ifndef	ae2fpat_arrcfg_h
-#define ae2fpat_arrcfg_h
+#ifndef	ae2fpat_arrcfg_auto_h
+#define ae2fpat_arrcfg_auto_h
 
 #include <ae2f/pat/macro.h>
 #include <ae2f/c90/StdInt.h>
@@ -11,10 +11,19 @@
 #include <ae2f/Keys.h>
 
 /**
- * @fn		ae2fpat_arrcfg
+ * @fn		ae2fpat_arrcfg_imp
  * @brief	naive copy of array from `src` to `dst`.
+ * @tparam	L
+ * @tparam	memcpy
+ * @tparam	memset
+ * @param	wr_dst
+ * @param	c_dst_nel
+ * @param	c_dst_szel
+ * @param	rd_src
+ * @param	c_src_nel
+ * @param	c_src_szel
  * */
-ae2f_MAC((L, memcpy, memset, )) ae2fpat_arrcfg(
+ae2f_MAC((L, memcpy, memset, )) ae2fpat_arrcfg_imp(
 		void*		wr_dst,
 		const size_t	c_dst_nel,
 		const size_t	c_dst_szel,

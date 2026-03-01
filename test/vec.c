@@ -12,7 +12,7 @@ int main(void) {
 	unsigned count2		= 0;
 	long* ptr2		= 0;
 
-	_ae2fpat_vec_grow(
+	_ae2fpat_vec_grow_imp(
 			L
 			, int
 			, ae2fpat_allocarr
@@ -29,7 +29,7 @@ int main(void) {
 	assert(count_max == 3);
 
 
-	_ae2fpat_vec_grow(
+	_ae2fpat_vec_grow_imp(
 			L
 			, int
 			, ae2fpat_allocarr
@@ -49,7 +49,7 @@ int main(void) {
 	ptr[2] = 8;
 
 
-	_ae2fpat_vec_grow(
+	_ae2fpat_vec_grow_imp(
 			L
 			, int
 			, ae2fpat_allocarr
@@ -67,7 +67,7 @@ int main(void) {
 	assert(ptr[1] == 5);
 	assert(ptr[2] == 8);
 
-	_ae2fpat_vec_grow(
+	_ae2fpat_vec_grow_imp(
 			L
 			, long
 			, ae2fpat_allocarr
@@ -79,7 +79,7 @@ int main(void) {
 			, sizeof(long)
 			);
 #if 1
-	_ae2fpat_vec_recfg(
+	_ae2fpat_vec_recfg_imp(
 			long		/* TYPE_DST */
 			, int		/* TYPE_SRC */
 			, mempcy

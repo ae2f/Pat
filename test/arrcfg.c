@@ -10,7 +10,7 @@ int main(void) {
 
 	printf("OLD:\t\t%d %d %d\n", DST[0], DST[1], DST[2]);
 
-	_ae2fpat_arrcfg(L
+	_ae2fpat_arrcfg_imp(L
 			, memcpy
 			, memset
 			, DST, sizeof(DST) / sizeof(DST[0]), sizeof(DST[0])
@@ -22,7 +22,7 @@ int main(void) {
 
 	printf("char to int:\t%d %d %d\n", DST[0], DST[1], DST[2]);
 
-	_ae2fpat_arrcfg(L
+	_ae2fpat_arrcfg_imp(L
 			, memcpy
 			, memset
 			, DST2, sizeof(DST2) / sizeof(DST2[0]), sizeof(DST2[0])
