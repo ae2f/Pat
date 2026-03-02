@@ -1,4 +1,4 @@
-#include <ae2f/pat/macro.h>
+#include <ae2f/pat/macrofunc.h>
 #include <ae2f/pat/vec.auto.h>
 
 int main(void);

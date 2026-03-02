@@ -1,5 +1,5 @@
 #ifndef	ae2f_MAC
-#define ae2f_MAC(a) static void
+#define ae2f_MAC(a)	struct
 #endif
 
 #ifndef	__ae2f_MACRO_GENERATED

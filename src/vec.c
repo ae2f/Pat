@@ -1,7 +1,7 @@
 #ifndef	ae2fpat_vec_auto_h
 #define ae2fpat_vec_auto_h
 
-#include <ae2f/pat/macro.h>
+#include <ae2f/pat/macrostruct.h>
 #include <ae2f/pat/allocarr.h>
 #include <ae2f/pat/arrcfg.auto.h>
 #include <ae2f/Keys.h>
@@ -12,6 +12,19 @@ typedef int TYPE;
 typedef int TYPE_DST;
 typedef int TYPE_SRC;
 #endif
+
+ae2f_MAC((TYPE, size_t)) ae2fpat_vec {
+	TYPE*	m_vec;
+	size_t	m_nel;
+	size_t	m_nmax;
+}
+
+#if	!__ae2f_MACRO_GENERATED
+;
+#endif
+
+#undef	ae2f_MAC
+#include	<ae2f/pat/macrofunc.h>
 
 ae2f_MAC((TYPE, )) ae2fpat_vec_init_imp(
 		fn_ae2fpat_allocarr_t	fn_alloc,
