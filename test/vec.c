@@ -43,6 +43,7 @@ int main(void) {
 
 	assert(count_max == count);
 	assert(count_max == 3);
+	assert(ptr);
 
 	ptr[0] = 3;
 	ptr[1] = 5;
@@ -63,6 +64,7 @@ int main(void) {
 
 	assert(count_max == count);
 	assert(count_max == 7);
+	assert(ptr);
 	assert(ptr[0] == 3);
 	assert(ptr[1] == 5);
 	assert(ptr[2] == 8);

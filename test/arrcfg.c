@@ -16,6 +16,7 @@ int main(void) {
 			, DST, sizeof(DST) / sizeof(DST[0]), sizeof(DST[0])
 			, SRC, sizeof(SRC) / sizeof(SRC[0]), sizeof(SRC[0]));
 
+	assert(DST);
 	assert(DST[0] == 1);
 	assert(DST[1] == 2);
 	assert(DST[2] == 3);
@@ -28,6 +29,7 @@ int main(void) {
 			, DST2, sizeof(DST2) / sizeof(DST2[0]), sizeof(DST2[0])
 			, DST, sizeof(DST) / sizeof(DST[0]), sizeof(DST[0]));
 
+	assert(DST);
 	assert(DST2[0] == 1);
 	assert(DST2[1] == 2);
 	assert(DST2[2] == 3);
