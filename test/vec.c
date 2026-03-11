@@ -1,6 +1,6 @@
 #include <ae2f/pat/vec.auto.h>
 #include <ae2f/pat/allocarr.h>
-#include <assert.h>
+#include <ae2fpat_assertassume.h>
 #include <stdio.h>
 
 int main(void);
@@ -24,9 +24,9 @@ int main(void) {
 			, sizeof(int)
 			);
 
-	assert(ptr);
-	assert(count_max == count);
-	assert(count_max == 3);
+	ae2fpat_assertassume(ptr);
+	ae2fpat_assertassume(count_max == count);
+	ae2fpat_assertassume(count_max == 3);
 
 
 	_ae2fpat_vec_grow_imp(
@@ -41,9 +41,9 @@ int main(void) {
 			, sizeof(int)
 			);
 
-	assert(count_max == count);
-	assert(count_max == 3);
-	assert(ptr);
+	ae2fpat_assertassume(count_max == count);
+	ae2fpat_assertassume(count_max == 3);
+	ae2fpat_assertassume(ptr);
 
 	ptr[0] = 3;
 	ptr[1] = 5;
@@ -62,12 +62,12 @@ int main(void) {
 			, sizeof(int)
 			);
 
-	assert(count_max == count);
-	assert(count_max == 7);
-	assert(ptr);
-	assert(ptr[0] == 3);
-	assert(ptr[1] == 5);
-	assert(ptr[2] == 8);
+	ae2fpat_assertassume(count_max == count);
+	ae2fpat_assertassume(count_max == 7);
+	ae2fpat_assertassume(ptr);
+	ae2fpat_assertassume(ptr[0] == 3);
+	ae2fpat_assertassume(ptr[1] == 5);
+	ae2fpat_assertassume(ptr[2] == 8);
 
 	_ae2fpat_vec_grow_imp(
 			L
@@ -99,13 +99,13 @@ int main(void) {
 
 	printf("count2: %u\n", count2);
 
-	assert(count_max2 == count2);
-	assert(count2 >= 3);
-	assert(ptr);
-	assert(ptr2);
-	assert(ptr2[0] == 3);
-	assert(ptr2[1] == 5);
-	assert(ptr2[2] == 8);
+	ae2fpat_assertassume(count_max2 == count2);
+	ae2fpat_assertassume(count2 >= 3);
+	ae2fpat_assertassume(ptr);
+	ae2fpat_assertassume(ptr2);
+	ae2fpat_assertassume(ptr2[0] == 3);
+	ae2fpat_assertassume(ptr2[1] == 5);
+	ae2fpat_assertassume(ptr2[2] == 8);
 
 
 	free(ptr);
