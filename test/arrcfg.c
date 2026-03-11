@@ -16,7 +16,6 @@ int main(void) {
 			, DST, sizeof(DST) / sizeof(DST[0]), sizeof(DST[0])
 			, SRC, sizeof(SRC) / sizeof(SRC[0]), sizeof(SRC[0]));
 
-	ae2fpat_assertassume(DST);
 	ae2fpat_assertassume(DST[0] == 1);
 	ae2fpat_assertassume(DST[1] == 2);
 	ae2fpat_assertassume(DST[2] == 3);
@@ -29,7 +28,6 @@ int main(void) {
 			, DST2, sizeof(DST2) / sizeof(DST2[0]), sizeof(DST2[0])
 			, DST, sizeof(DST) / sizeof(DST[0]), sizeof(DST[0]));
 
-	ae2fpat_assertassume(DST);
 	ae2fpat_assertassume(DST2[0] == 1);
 	ae2fpat_assertassume(DST2[1] == 2);
 	ae2fpat_assertassume(DST2[2] == 3);
