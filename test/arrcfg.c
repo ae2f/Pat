@@ -1,5 +1,5 @@
 #include <ae2f/pat/arrcfg.auto.h>
-#include <ae2fpat_assertassume.h>
+#include <ae2f/pat/dbg.h>
 #include <stdio.h>
 
 int main(void);

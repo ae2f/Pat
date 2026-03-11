@@ -1,6 +1,6 @@
 #include <ae2f/pat/vec.auto.h>
 #include <ae2f/pat/allocarr.h>
-#include <ae2fpat_assertassume.h>
+#include <ae2f/pat/dbg.h>
 #include <stdio.h>
 
 int main(void);
