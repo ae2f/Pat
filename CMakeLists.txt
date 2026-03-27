@@ -29,11 +29,11 @@ project(Pat VERSION 0)
 ae2f_CoreLibFetchX(ae2f Core main)
 
 ae2f_Macro_init(1 30 100)
-ae2f_Macro_Lib_V2(
+ae2f_Macro_Lib_V2_REL(
 	ae2f Pat INTERFACE 
 	${PROJECT_SOURCE_DIR}/src/ "NOTHING" 
 	${PROJECT_SOURCE_DIR}/src/ "*.c" 
-	${PROJECT_SOURCE_DIR}/inc/ae2f/pat/ ".auto.h"
+	inc/ae2f/pat/ ".auto.h"
 	${PROJECT_SOURCE_DIR}/cfg/pat.cmake.in
 	inc ON
 	)

@@ -80,7 +80,7 @@ int main(void) {
 			, 4
 			, sizeof(long)
 			);
-#if 1
+
 	_ae2fpat_vec_recfg_imp(
 			long		/* TYPE_DST */
 			, int		/* TYPE_SRC */
@@ -102,16 +102,13 @@ int main(void) {
 	ae2fpat_assertassume(count_max2 == count2);
 	ae2fpat_assertassume(count2 >= 3);
 	ae2fpat_assertassume(ptr);
+
 	ae2fpat_assertassume(ptr2);
 	ae2fpat_assertassume(ptr2[0] == 3);
 	ae2fpat_assertassume(ptr2[1] == 5);
 	ae2fpat_assertassume(ptr2[2] == 8);
 
-
 	free(ptr);
 	free(ptr2);
-#endif
-
-
 	return 0;
 }
