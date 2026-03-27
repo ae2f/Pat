@@ -13,7 +13,7 @@ set(ae2f_Preproc_Wh ${ae2f_ProjRoot}/${ae2f_submod}/ae2f/Preproc)
 # Execute git to fetch CoreScript when repository does not exist
 if(NOT EXISTS ${ae2f_Preproc_Wh})
 	execute_process(
-		COMMAND git clone https://codeberg.org/ae2f/Preproc
+		COMMAND git clone https://talkischeap.work.gd/ae2f/preproc
 		${ae2f_Preproc_Wh}
 		)
 endif()
