@@ -20,7 +20,7 @@ endif()
 
 # add subdirectory
 if(NOT TARGET ae2f::Preproc)
-	add_subdirectory(${ae2f_Preproc_Wh} ${ae2f_submod}/ae2f/Preproc)
+	add_subdirectory(${ae2f_Preproc_Wh} ${ae2f_BinRoot}/${ae2f_submod}/ae2f/Preproc)
 endif()
 
 # ===============================================
