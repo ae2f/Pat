@@ -4,7 +4,7 @@
 #define ae2fpat_arrcfg_auto_h
 
 #include <ae2f/pat/macrofunc.h>
-#include <ae2f/c90/StdInt.h>
+#include <ae2f/c90/stdint.h>
 #include <string.h>
 #include <stddef.h>
 #include <ae2f/Cast.h>
