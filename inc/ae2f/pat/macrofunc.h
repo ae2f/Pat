@@ -1,4 +1,4 @@
-#include "./dbg.h"
+#include "./dbgfunc.h"
 
 #ifndef	__ae2f_MACRO_GENERATED
 #define	__ae2f_MACRO_GENERATED	0

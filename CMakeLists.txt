@@ -38,5 +38,14 @@ ae2f_Macro_Lib_V2_REL(
 	inc ON
 	)
 
+ae2f_Macro_Lib_V2_REL(
+	ae2f Pat2 INTERFACE 
+	${PROJECT_SOURCE_DIR}/src/ "NOTHING" 
+	${PROJECT_SOURCE_DIR}/src/ "*.c" 
+	inc/.ae2f/pat/ ".h"
+	${PROJECT_SOURCE_DIR}/cfg/pat.cmake.in
+	inc ON
+	)
+
 target_link_libraries(ae2f-Pat INTERFACE ae2f::Core)
 ae2f_CoreTestTentVerbose(ae2f-Pat test)
