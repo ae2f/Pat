@@ -15,6 +15,9 @@
 #define	ae2fpat_assertunless(a)	\
 	assert(a);	ae2f_ifezerr(a)
 
+#define	ae2fpat_assertassumeunless(a)	\
+	ae2fpat_assertassume(a);	ae2f_ifezerr(a)
+
 #if	defined(NDEBUG)	&& NDEBUG
 #define AE2FPAT_DBG	0
 #else
