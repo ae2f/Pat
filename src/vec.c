@@ -7,7 +7,7 @@
 #include <ae2f/Keys.h>
 #include <ae2f/cc.h>
 
-#if	!__ae2f_MACRO_GENERATED
+#if	!_ae2f_MACRO_GENERATED
 typedef int TYPE;
 typedef int TYPE_DST;
 typedef int TYPE_SRC;
@@ -19,7 +19,7 @@ ae2f_MAC((TYPE, size_t)) ae2fpat_vec {
 	size_t	m_nmax;
 }
 
-#if	!__ae2f_MACRO_GENERATED
+#if	!_ae2f_MACRO_GENERATED
 ;
 #endif
 
@@ -44,7 +44,7 @@ ae2f_MAC((TYPE, )) ae2fpat_vec_init_imp(
 	(r_nel) = (r_nmax) = (c_nel_new);
 }
 
-#if	!__ae2f_MACRO_GENERATED
+#if	!_ae2f_MACRO_GENERATED
 
 #define _ae2fpat_vec_init_imp( \
 	/** tparam */ \
@@ -93,7 +93,7 @@ ae2f_MAC((L, TYPE, )) ae2fpat_vec_grow_imp(
 	}
 }
 
-#if	!__ae2f_MACRO_GENERATED
+#if	!_ae2f_MACRO_GENERATED
 
 #define _ae2fpat_vec_grow_imp( \
 	/** tparam */ \
